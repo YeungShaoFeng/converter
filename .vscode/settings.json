@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "C:\\Users\\20131\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
+    "python.formatting.provider": "yapf",
+    "python.linting.flake8Enabled": true
+}
