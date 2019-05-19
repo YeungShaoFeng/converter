@@ -31,16 +31,14 @@ class Tre:
                     self.treNum += self.tree[i] * 10 ** i
 
                 #print the treimal number
-                # print(f"dec --> tre: {self.treNum}", end='')
+                print(f"dec --> tre: {self.treNum}", end='')
+                print()
                 
-                # print()
-                # # return self.Tree
-
             def untre(self):
                 for i in range(self.cnt):
                     self.bus += self.tree[i] * 3 ** i
-                # print("tre --> dec: ", end='')
-                # print(self.bus)
+                print("tre --> dec: ", end='')
+                print(self.bus)
             # encripythion from dec-->tre
             tre(self)
             untre(self)
