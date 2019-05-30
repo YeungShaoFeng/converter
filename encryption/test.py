@@ -116,15 +116,15 @@ from sys import getsizeof
 
 # ----<str to list>
 # s = '123'
-s = [1, 2, 3]
+# s = [1, 2, 3]
 # print(int(s))
 # print(len(s))
 # print(s.replace('\u203a', ''))
 # s = list(s)
 # print(s)
 # print(len(s))
-for i in range(len(s)):
-    print(int(s[i]))
+# for i in range(len(s)):
+#     print(int(s[i]))
 
 # ----<str to list>
 
@@ -139,3 +139,15 @@ for i in range(len(s)):
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+# ----<split>
+
+a = "a,dsd, ds, da, 16"
+# if (16 in a):
+#     print(1)
+a = a.replace(' ', '').replace('16', 'F').split(",")
+# a = a.split(",")
+if ('16' in a):
+    print(1)
+print(a)
+# ----</split>
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
