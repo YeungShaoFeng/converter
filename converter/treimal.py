@@ -1,11 +1,11 @@
 import sys
 import time
 import random
-from myway import Tre
+from myway_2 import Tre
 
 
-show = 1
-notShow = 0
+show = '1'
+notShow = '0'
 # main funcs
 # work with file
 def workWithFile(inputfile, outputfile, aimtype):
@@ -15,7 +15,7 @@ def workWithFile(inputfile, outputfile, aimtype):
             while(line):
                 if (line):
                     num = Tre(line, aimtype, notShow)
-                    num.GO()
+                    num.start()
                     cnt = -1
                     for var in num.cnt:
                         cnt += 1
@@ -27,13 +27,8 @@ def workWithFile(inputfile, outputfile, aimtype):
 
 # work with num
 def workWithNum(num, aimtype):
-    num = inputFliter(num)
-    aimtype = inputFliter(aimtype)
-    for var in num:
-        print("-"*32)
-        print(f"Dec: {var}")
-        dec = Tre(var, aimtype, show)
-        dec.GO()
+    dec = Tre(inputFliter(num), inputFliter(aimtype), inputFliter(show))
+    dec.start()
 
 
 # random number writing
@@ -46,7 +41,11 @@ def randomWrite(fi):
 
 # input fliter
 def inputFliter(data):
-    return data.replace(' ', '').replace("\u202c", '').split(',')
+    data = data.replace(' ', '').replace("\u202c", '').split(',')
+    for var in data:
+        if(var==''):
+            data.remove(var)
+    return data
 
 
 # options prompt for users

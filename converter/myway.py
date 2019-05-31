@@ -75,7 +75,7 @@ class Tre:
                     fout(self, 3)
             judge(self, int(self.aimtype[i]))
 
-        self.num = self.num
+
         self.bus = int(self.num)
         for i in range(len(self.aimtype)):
             tre(self, i)
@@ -87,8 +87,12 @@ def inputFliter(data):
     return data.replace(' ', '').replace("\u202c", '').split(',')
     
 
+a = '255'
+num = Tre(a, [2], 1)
+num.GO()
+
+
 # a = '9223372036854775807‬3148789465169745616516987987915321654979'
-# a = '255'
 # nums = input("itself: ")
 # aimtype = input("aimtype: ")
 # t1 = perf_counter()
@@ -102,7 +106,7 @@ def inputFliter(data):
 #     print('-'*32)
 #     print("Dec: {}".format(var))
 #     for yar in aimtype:
-#         num = Tre(var, yar)
-#         num.GO()
+        # num = Tre(var, yar)
+        # num.GO()
 # t2 = perf_counter()
 # print(f'GO time is: {t2-t1} s. ')
